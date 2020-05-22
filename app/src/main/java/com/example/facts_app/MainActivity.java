@@ -15,7 +15,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         factTextView = findViewById(R.id.txt_fact);
-        factTextView.setText("Morteza Kordi");
+
+        String[] myFacts = Fact.getFacts();
+
+        for (String fact : myFacts){
+            factTextView.append(fact + "\n\n");
+        }
 
 
     }
